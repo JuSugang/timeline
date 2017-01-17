@@ -3,17 +3,18 @@ class WallController < ApplicationController
   end
 
   def write_complete
-	p=post.new
+	p=Post.new
 	p.name=params[:writer]
 	p.content=params[:content]
 	if p.save
-		redirect_to "/wall/posts."
+		redirect_to "/wall/posts"
 	else
 		flash[:alert] =p.errors[:content][0]
 		redirect_to :back
+	end
   end
-
-  def posts
-	@posts =post.all
+	
+  def posts	
+	@posts =Post.all
   end
 end
