@@ -3,6 +3,11 @@ Timeline::Application.routes.draw do
   get "user/signup"
   post "user/signup_complete"
 
+  get "user/login"
+  post "user/login_complete"
+
+  get "user/logout"
+
   get "wall/write"
   post "wall/write_complete"
   

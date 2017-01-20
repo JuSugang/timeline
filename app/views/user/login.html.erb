@@ -1,9 +1,15 @@
+<div>
+	<h4><%= flash[:alert] %></h4>
+</div>
+
 <div style="background-color:#e9eaed;">
 	<h1>Log in</h1>
 	<form action ="/user/login_complete" method="post">
+		
 		Username: <input type="text" name="username"><br>
 		Password: <input type="password" name="password"<br>
-		<input type="sbmit" value="Log in">
+		<input type="submit" value="Log in">
+		
 	</form>
 </div>
 		
